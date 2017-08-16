@@ -41,7 +41,7 @@ namespace MSPEncryptData
                 else
                 {
                     namein = file_up.FileName;
-                    file_up.PostedFile.SaveAs(Server.MapPath("~/Data/") + namein);
+                    file_up.PostedFile.SaveAs(Server.MapPath("~/DataEn/") + namein);
                 }
             }            
             else if(txt_pass.Text == "")
@@ -53,39 +53,39 @@ namespace MSPEncryptData
             else
             {                          
                 namein = "data.";
-                File.WriteAllText(Server.MapPath("~/Data/") + namein, txt_input.Text);
+                File.WriteAllText(Server.MapPath("~/DataEn/") + namein, txt_input.Text);
             }
             if(namein != "" && txt_pass.Text != "")
             {
                 
                 lb_msg.ForeColor = System.Drawing.Color.Green;
                 lb_msg.Text = "↓↓↓ OUTPUT ↓↓↓";
-                strin = File.ReadAllText(Server.MapPath("~/Data/") + namein);
+                strin = File.ReadAllText(Server.MapPath("~/DataEn/") + namein);
                 //lb_msg.Text = namein;
                 if (radio_encrypt.Checked == true)
                 {
 
-                    ce = new CheckEn(strin, "00" + txt_pass.Text, 1);
+                    ce = new CheckEn(strin,  txt_pass.Text, 1);
                     stren = ce.StartEn();                    
                     nameout = namein.Replace("txt", "") + "Encrypt";
-                    File.WriteAllText(Server.MapPath("~/Data/") + nameout, stren);
+                    File.WriteAllText(Server.MapPath("~/DataEn/") + nameout, stren);
                     lb_download.Text = nameout;
                     txt_view.Visible = false;
                 }
                 else if (radio_decrypt.Checked == true)
                 {
                     
-                    ce = new CheckEn(strin, "00" + txt_pass.Text, 0);
+                    ce = new CheckEn(strin,  txt_pass.Text, 0);
                     stren = ce.StartEn();
                     nameout = namein.Replace("Encrypt", "") + "txt";
-                    File.WriteAllText(Server.MapPath("~/Data/") + nameout, stren);
+                    File.WriteAllText(Server.MapPath("~/DataEn/") + nameout, stren);
                     lb_download.Text = nameout;
                     txt_view.Visible = true;
                 }
 
                 //txt_view.Height = 100;
-                txt_view.Text = File.ReadAllText(Server.MapPath("~/Data/") + nameout);
-                File.Delete(Server.MapPath("~/Data/") + namein);
+                txt_view.Text = File.ReadAllText(Server.MapPath("~/DataEn/") + nameout);
+                File.Delete(Server.MapPath("~/DataEn/") + namein);
                 bt_download.Enabled = true;
                 txt_input.Text = "";
             }
@@ -98,8 +98,7 @@ namespace MSPEncryptData
             Response.Clear();
             Response.ContentType = "application/octet-stream";
             Response.AppendHeader("Content-Disposition", "filename=" + lb_download.Text);
-            Response.AddHeader("Content-Length", "2097152");
-            Response.TransmitFile(Server.MapPath("~/Data/") + lb_download.Text);
+            Response.TransmitFile(Server.MapPath("~/DataEn/") + lb_download.Text);
             Response.End();
         }
     }
