@@ -64,8 +64,8 @@ namespace MSPEncryptData
                 //lb_msg.Text = namein;
                 if (radio_encrypt.Checked == true)
                 {
-                    
-                    ce = new CheckEn(strin, txt_pass.Text, 1);
+
+                    ce = new CheckEn(strin, "00" + txt_pass.Text, 1);
                     stren = ce.StartEn();                    
                     nameout = namein.Replace("txt", "") + "Encrypt";
                     File.WriteAllText(Server.MapPath("~/DataOut/") + nameout, stren);
@@ -74,7 +74,7 @@ namespace MSPEncryptData
                 else if (radio_decrypt.Checked == true)
                 {
                     
-                    ce = new CheckEn(strin, txt_pass.Text, 0);
+                    ce = new CheckEn(strin, "00" + txt_pass.Text, 0);
                     stren = ce.StartEn();
                     nameout = namein.Replace("Encrypt", "") + "txt";
                     File.WriteAllText(Server.MapPath("~/DataOut/") + nameout, stren);
