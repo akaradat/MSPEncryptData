@@ -33,6 +33,7 @@
             Password(Number only):
             <asp:TextBox ID="txt_pass" runat="server"  Width="20%"></asp:TextBox>
         </p>
+        
         <p>
             <asp:Button ID="bt_start" runat="server" Text="Start" OnClick="bt_start_Click" />
         </p>
@@ -40,7 +41,7 @@
             <asp:Label ID="lb_msg" runat="server"  Font-Bold="true"></asp:Label>
         </p>
         <p>
-            <asp:TextBox ID="txt_view" runat="server"  TextMode="MultiLine" Width="40%"></asp:TextBox>
+            <asp:TextBox ID="txt_view" runat="server"  Height="100px" TextMode="MultiLine" Width="40%"></asp:TextBox>
         </p>
         <p>
             <asp:Label ID="lb_download" runat="server" Enabled="False"></asp:Label>
