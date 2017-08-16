@@ -17,7 +17,7 @@
         </div>
         <p>
             Input text or choose file: 
-            <asp:FileUpload ID="file_up" runat="server" Width="90px"/>
+            <asp:FileUpload ID="file_up" runat="server"/>
         </p>
         <p>
             <asp:TextBox ID="txt_input" runat="server" Height="50px" TextMode="MultiLine" Width="40%"></asp:TextBox>
@@ -41,7 +41,7 @@
             <asp:Label ID="lb_msg" runat="server"  Font-Bold="true"></asp:Label>
         </p>
         <p>
-            <asp:TextBox ID="txt_view" runat="server"  Height="100px" TextMode="MultiLine" Width="40%"></asp:TextBox>
+            <asp:TextBox ID="txt_view" runat="server"  Height="100px" TextMode="MultiLine" Width="40%" Visible="False"></asp:TextBox>
         </p>
         <p>
             <asp:Label ID="lb_download" runat="server" Enabled="False"></asp:Label>
