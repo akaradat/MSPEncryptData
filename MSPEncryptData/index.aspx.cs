@@ -13,5 +13,15 @@ namespace MSPEncryptData
         {
 
         }
+
+        protected void bt_start_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void bt_download_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
