@@ -4,14 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
     <title>MSP Encrypt Data</title>
     <style>        
         body{
-            margin-top:0px;
-            margin-left:0px;
-            margin-bottom:10px;
-            width:100%;
+            margin:0px 0px 10px 0px;
+            
             position:relative;
             text-align:center;
             background-color: lightgray;
@@ -32,26 +30,26 @@
            
         }
         footer{
+            margin:0px 0px 10px 0px;
             width:100%;
             text-decoration:none;
             text-align:right;
-            color:darkgray;
+            color:#666666;
             bottom:0px;
-            padding-right:15px;
-            margin-right:15px;
+
+            
         }
         .main{
             height:500px;
             background-color:antiquewhite;
         }
         .footer-link{
+
             text-decoration:none;
             margin-right:15px;
             
         }
-        .footer-infor{
-            margin-right:15px;
-        }
+        
     </style>
 </head>
 <body>
@@ -115,8 +113,9 @@
         <footer>
             <hr />
             
-            <asp:LinkButton ID="lnk_help" runat="server" CssClass="footer-link" ForeColor="#666666" OnClick="lnk_help_Click">Help</asp:LinkButton>
-            <p  >
+            <asp:LinkButton ID="lnk_help" runat="server" CssClass="footer-link" ForeColor="#333333" OnClick="lnk_help_Click">Help</asp:LinkButton>
+            <asp:LinkButton ID="lnk_helpthai" runat="server" CssClass="footer-link" ForeColor="#333333" OnClick="lnk_helpthai_Click">วิธีใช้</asp:LinkButton>
+            <p style="padding-right:15px;" >
                 <asp:Label ID="lb_help" runat="server" Visible="False" >Information</asp:Label>
             </p>
             

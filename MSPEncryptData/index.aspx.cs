@@ -105,10 +105,19 @@ namespace MSPEncryptData
         protected void lnk_help_Click(object sender, EventArgs e)
         {
             lb_help.Visible = true;
-            lb_help.Text = "1.Input text or select file that you want to encrypt or decrypt<br />" +
+            lb_help.Text = "1.Input text or select file that you want to encrypt or decrypt(Only files with .txt or .Encrypt)<br />" +
                 "2.Select mode(Encrypt for create protect data,Decrypt for read data from protect data)<br/>" +
-                "3.Enter the password(incorrect decrypt if you enter the wrong pass)<br/>" +
+                "3.Enter the password(Incorrect decrypt if you enter the wrong pass)<br/>" +
                 "4.Finish! you can download the data for keep in anywhere";
+        }
+
+        protected void lnk_helpthai_Click(object sender, EventArgs e)
+        {
+            lb_help.Visible = true;
+            lb_help.Text = "1.ใส่ข้อความหรือเลือกไฟล์(เฉพาะนามสกุล .txt หรือ .Encrypt)<br />" +
+                "2.เลือกโหมด(Encrypt เพื่อสร้างไฟล์เข้ารหัสข้อมูล ,Decrypt เพื่ออ่านไฟล์ที่ถูกเข้ารหัส)<br/>" +
+                "3.ใส่รหัสผ่าน(ข้อความจะแสดงไม่ถูกหากใส่รหัสผิด)<br/>" +
+                "4.สำเร็จ! คุณสามารถดาวน์โหลดและเก็บไฟล์ไว้ที่ไหนก็ได้ตามต้องการ";
         }
     }
 }
