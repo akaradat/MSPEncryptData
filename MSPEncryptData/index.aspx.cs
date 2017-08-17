@@ -101,5 +101,14 @@ namespace MSPEncryptData
             Response.TransmitFile(Server.MapPath("~/DataEn/") + lb_download.Text);
             Response.End();
         }
+
+        protected void lnk_help_Click(object sender, EventArgs e)
+        {
+            lb_help.Visible = true;
+            lb_help.Text = "1.Input text or select file that you want to encrypt or decrypt<br />" +
+                "2.Select mode(Encrypt for create protect data,Decrypt for read data from protect data)<br/>" +
+                "3.Enter the password(incorrect decrypt if you enter the wrong pass)<br/>" +
+                "4.Finish! you can download the data for keep in anywhere";
+        }
     }
 }
