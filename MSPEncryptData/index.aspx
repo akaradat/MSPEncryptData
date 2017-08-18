@@ -87,7 +87,7 @@
             </p>
             <p>
                 Password(Number only):
-                <asp:TextBox ID="txt_pass" runat="server"  Width="20%"></asp:TextBox>
+                <asp:TextBox ID="txt_pass" runat="server"  Width="20%" autocomplete="off"></asp:TextBox>
             </p>
         
             <p>
